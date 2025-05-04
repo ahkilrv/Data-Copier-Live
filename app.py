@@ -1,12 +1,15 @@
 import sys
 from config import DB_DETAILS
+from util import get_tables
 
 def main():
 
     env = sys.argv[1]
-    print(env)
     db_details=DB_DETAILS[env]
-    print (db_details)
+    # print (db_details)
+    tables=get_tables('table_list.txt')
+    for idx,table in tables.iterrows():
+        print(table.table_name)
 
 if __name__=='__main__':
     main()
