@@ -1,4 +1,9 @@
 import os
+from dotenv import load_dotenv
+from mysql.connector import errorcode as ec
+from mysql import connector as mc
+
+load_dotenv()
 DB_DETAILS = {
     'dev' :
     {
